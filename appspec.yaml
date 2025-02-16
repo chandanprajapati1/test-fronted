@@ -1,10 +1,1 @@
-version: 0.0
-Resources:
-  - TargetService:
-      Type: AWS::ECS::Service
-      Properties:
-        TaskDefinition: 'arn:aws:ecs:ap-south-1:722163322018:task-definition/Marketplace-Frontend-Task'
-        LoadBalancerInfo:
-          ContainerName: 'Marketplace-Frontend-Container'
-          ContainerPort: 3000
-        PlatformVersion: 'LATEST'
+
