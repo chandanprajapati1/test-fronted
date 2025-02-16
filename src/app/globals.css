@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.slick-prev:before {
+  display: none;
+}
+
+.slick-next:before {
+  display: none;
+}
+
+.estimated {
+  background: linear-gradient(90deg, #10B946 0%, #13311D 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: white !important
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, and Opera */
+}
+
+/* Base checkbox styles */
+.auth input[type="checkbox"] {
+  appearance: none;
+  border: 1px solid #d1d5db;
+  /* Default border color (gray-300) */
+  border-radius: 2px;
+  /* Optional: make it rounded */
+  background-color: #fff;
+  /* Default background color */
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+  position: relative;
+  /* Needed for the checkmark */
+}
+
+/* Checkbox hover effect */
+.auth input[type="checkbox"]:hover {
+  border-color: #9ca3af;
+  /* Darken border on hover */
+}
+
+/* Checkbox checked state */
+.auth input[type="checkbox"]:checked {
+  background-color: #57cc99;
+  /* Green check color */
+  border-color: #57cc99;
+  /* Green border when checked */
+}
+
+/* Add a custom checkmark for the checked state */
+.auth input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  /* Checkmark color */
+  mask: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='4' d='M5 13l4 4L19 7'/%3E%3C/svg%3E") center / contain no-repeat;
+  -webkit-mask: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='4' d='M5 13l4 4L19 7'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+@layer base {
+  body {
+    @apply font-inter;
+  }
+}
+
+.Toastify__toast {
+  border-radius: 0 !important;
+  padding: 4px 0 0 0 !important;
+  margin: 2px 0 10px 0 !important;
+}
+
+
+.Toastify__close-button {
+  padding: 8px !important;
+  opacity: 0.7 !important;
+}
+
+.Toastify__toast-body {
+  padding: 12px 16px !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.text-vertical {
+  writing-mode: vertical-lr;
+  text-align: END
+}
