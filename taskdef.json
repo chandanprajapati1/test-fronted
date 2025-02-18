@@ -1,13 +1,13 @@
 {
-    "family": "Marketplace-Frontend-Task",
+    "taskDefinitionArn": "arn:aws:ecs:ap-south-1:957779811736:task-definition/Fronted-Task:1",
     "containerDefinitions": [
         {
-            "name": "Marketplace-Frontend-Container",
-            "image": "722163322018.dkr.ecr.ap-south-1.amazonaws.com/marketplace-frontend",
+            "name": "Fronted-Container",
+            "image": "957779811736.dkr.ecr.ap-south-1.amazonaws.com/fronted",
             "cpu": 0,
             "portMappings": [
                 {
-                    "name": "marketplace-frontend-port",
+                    "name": "container-port",
                     "containerPort": 3000,
                     "hostPort": 3000,
                     "protocol": "tcp",
@@ -15,11 +15,6 @@
                 }
             ],
             "essential": true,
-            "command": [
-                "npm",
-                "run",
-                "start"
-            ],
             "environment": [],
             "environmentFiles": [],
             "mountPoints": [],
@@ -28,7 +23,7 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/Marketplace-Frontend-Task",
+                    "awslogs-group": "/ecs/Fronted-Task",
                     "mode": "non-blocking",
                     "awslogs-create-group": "true",
                     "max-buffer-size": "25m",
@@ -40,9 +35,50 @@
             "systemControls": []
         }
     ],
-    "taskRoleArn": "arn:aws:iam::722163322018:role/ecsTaskExecutionRole",
-    "executionRoleArn": "arn:aws:iam::722163322018:role/ecsTaskExecutionRole",
+    "family": "Fronted-Task",
+    "taskRoleArn": "arn:aws:iam::957779811736:role/ecsTaskExecutionRole",
+    "executionRoleArn": "arn:aws:iam::957779811736:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
+    "revision": 1,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+        },
+        {
+            "name": "ecs.capability.execution-role-awslogs"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.28"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.task-iam-role"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
     "requiresCompatibilities": [
         "FARGATE"
     ],
@@ -51,5 +87,9 @@
     "runtimePlatform": {
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
-    }
+    },
+    "registeredAt": "2025-02-18T07:40:35.287Z",
+    "registeredBy": "arn:aws:iam::957779811736:user/Chandan-IAM",
+    "enableFaultInjection": false,
+    "tags": []
 }
