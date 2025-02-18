@@ -20,7 +20,7 @@ ADD . /app
  # Install dependencies (this is where npm install will happen)
 RUN npm install
 
-# Build the app
+# Build the app1
 RUN npm run build
 
 # Final stage
