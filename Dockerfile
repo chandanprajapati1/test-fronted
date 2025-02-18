@@ -9,7 +9,7 @@ LABEL Brandpts-node="1.0.0.0" \
 
 ENV TZ=Asia/Kolkata
 
-# Set the timezone   12
+# Set the timezone   122
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 WORKDIR /app
