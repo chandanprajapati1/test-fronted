@@ -10,10 +10,6 @@ LABEL Brandpts-node="1.0.0.0" \
 ENV TZ=Asia/Kolkata
 
 <<<<<<< HEAD
-# Set the timezone   1223
-=======
-# Set the timezone---ha
->>>>>>> e488aa3 (test)
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 WORKDIR /app
