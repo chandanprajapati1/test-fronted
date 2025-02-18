@@ -1,1 +1,10 @@
-
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: “arn:aws:ecs:ap-south-1:957779811736:task-definition/Brand-pts-task:7",
+        LoadBalancerInfo:
+          ContainerName: 'ENVR-Container'
+          ContainerPort: 3000
+        PlatformVersion: 'LATEST'
