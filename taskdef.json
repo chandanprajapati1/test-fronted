@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-south-1:957779811736:task-definition/Fronted-Task:1",
+    "taskDefinitionArn": "arn:aws:ecs:ap-south-1:957779811736:task-definition/Fronted-Task:2",
     "containerDefinitions": [
         {
             "name": "Fronted-Container",
-            "image": "957779811736.dkr.ecr.ap-south-1.amazonaws.com/fronted",
+            "image": "957779811736.dkr.ecr.ap-south-1.amazonaws.com/fronted:latest",
             "cpu": 0,
             "portMappings": [
                 {
