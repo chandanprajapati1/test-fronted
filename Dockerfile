@@ -15,7 +15,7 @@ WORKDIR /app
 ADD . /app
 
 #
-# Install dependencies again1
+# Install dependencies again12
  # Install dependencies (this is where npm install will happen)
 RUN npm install
 
