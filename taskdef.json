@@ -93,8 +93,8 @@
     "enableFaultInjection": false,
     "tags": [
         {
-            "Key": "Environment",
-            "Value": "Production"
+            "key": "Environment",
+            "value": "Production"
         }
     ]
 }
