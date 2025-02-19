@@ -14,8 +14,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 WORKDIR /app
 ADD . /app
 
-#
-# Install dependencies again12
+
  # Install dependencies (this is where npm install will happen)
 RUN npm install
 
