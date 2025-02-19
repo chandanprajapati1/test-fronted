@@ -91,5 +91,10 @@
     "registeredAt": "2025-02-18T07:40:35.287Z",
     "registeredBy": "arn:aws:iam::957779811736:user/Chandan-IAM",
     "enableFaultInjection": false,
-    "tags": []
+    "tags": [
+        {
+            "Key": "Environment",
+            "Value": "Production"
+        }
+    ]
 }
