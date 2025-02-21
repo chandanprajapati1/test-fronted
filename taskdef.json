@@ -1,13 +1,13 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-south-1:957779811736:task-definition/Fronted-Task:2",
+    "taskDefinitionArn": "arn:aws:ecs:ap-south-1:957779811736:task-definition/ENVR-Task:3",
     "containerDefinitions": [
         {
-            "name": "Fronted-Container",
-            "image": "957779811736.dkr.ecr.ap-south-1.amazonaws.com/fronted:latest",
+            "name": "ENVR-FRONTED",
+            "image": "957779811736.dkr.ecr.ap-south-1.amazonaws.com/fronted",
             "cpu": 0,
             "portMappings": [
                 {
-                    "name": "container-port",
+                    "name": "envr-port",
                     "containerPort": 3000,
                     "hostPort": 3000,
                     "protocol": "tcp",
@@ -23,7 +23,7 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/Fronted-Task",
+                    "awslogs-group": "/ecs/ENVR-Task",
                     "mode": "non-blocking",
                     "awslogs-create-group": "true",
                     "max-buffer-size": "25m",
@@ -35,11 +35,11 @@
             "systemControls": []
         }
     ],
-    "family": "Fronted-Task",
+    "family": "ENVR-Task",
     "taskRoleArn": "arn:aws:iam::957779811736:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::957779811736:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 1,
+    "revision": 3,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -82,14 +82,23 @@
     "requiresCompatibilities": [
         "FARGATE"
     ],
-    "cpu": "512",
-    "memory": "1024",
+    "cpu": "1024",
+    "memory": "3072",
     "runtimePlatform": {
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2025-02-18T07:40:35.287Z",
+    "registeredAt": "2025-02-21T15:32:11.548Z",
     "registeredBy": "arn:aws:iam::957779811736:user/Chandan-IAM",
     "enableFaultInjection": false,
-    "tags": []
+    "tags": [
+        {
+            "key": "Author",
+            "value": "Chandan"
+        },
+        {
+            "key": "Name",
+            "value": "CICD"
+        }
+    ]
 }
