@@ -5,5 +5,5 @@ Resources:
       Properties:
         TaskDefinition: "arn:aws:ecs:ap-south-1:957779811736:task-definition/ENVR-Task:3"
         LoadBalancerInfo:
-          ContainerName: "ENVR-Fronted"
+          ContainerName: "ENVR-FRONTED"
           ContainerPort: 3000
