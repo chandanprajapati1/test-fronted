@@ -3,8 +3,8 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: “arn:aws:ecs:ap-south-1:957779811736:task-definition/Fronted-Task:2",
+        TaskDefinition: “arn:aws:ecs:ap-south-1:957779811736:task-definition/ENVR-Task:3",
         LoadBalancerInfo:
-          ContainerName: 'Fronted-Container'
+          ContainerName: 'ENVR-Fronted'
           ContainerPort: 3000
-        PlatformVersion: 'LATEST'
+          PlatformVersion: 'LATEST'
