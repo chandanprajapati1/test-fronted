@@ -21,7 +21,7 @@ RUN npm install
 # Build the app1
 RUN npm run build
 
-# Final stage
+# Final stage1
 FROM 957779811736.dkr.ecr.ap-south-1.amazonaws.com/node
 WORKDIR /app
 COPY --from=build /app .
